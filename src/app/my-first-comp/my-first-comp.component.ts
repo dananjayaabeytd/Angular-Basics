@@ -10,7 +10,7 @@ export class MyFirstCompComponent {
   name:String= '';
   email:String= '';
   message:String= '';
-  isSubmitted:boolean= true;
+  isSubmitted:boolean= false;
   messages:Array<any>= [];
   
   onSubmit() :void{

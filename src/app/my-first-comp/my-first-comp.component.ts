@@ -14,10 +14,10 @@ export class MyFirstCompComponent {
   isSubmitted:boolean= false;
   messages:Array<any>= [];
 
-  private service:MyFirstService = inject(MyFirstService)
+  // private service:MyFirstService = inject(MyFirstService)
 
   constructor(
-    //private service:MyFirstService
+    private service:MyFirstService
   ){
     this.messages = this.service.getAllMessages();
     this.isSubmitted = this.messages.length > 0 

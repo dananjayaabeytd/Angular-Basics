@@ -10,13 +10,17 @@ export class MyFirstCompComponent {
   name:String= '';
   email:String= '';
   message:String= '';
-  isSubmitted:boolean= false;
+  isSubmitted:boolean= true;
+  messages:Array<any>= [];
   
   onSubmit() :void{
     this.isSubmitted = true;
-    console.log('Name: '+this.name);
-    console.log('Email: '+this.email);
-    console.log('Message: '+this.message);
+    this.messages.push({
+      'name':this.name,
+      'email':this.email,
+      'message':this.message
+    })
+    console.log(this.messages)
   }
 
 }

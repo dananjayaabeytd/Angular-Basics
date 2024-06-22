@@ -15,7 +15,7 @@ export class ProductService {
   ) { }
 
 
-  getAllProductsWithLimit(limit:number = 5):Observable<ProductRepresentation[]>{
+  getAllProductsWithLimit(limit:number = 10):Observable<ProductRepresentation[]>{
     // const productsUrl2:string = this.baseUrl + '/products?limit=' + 5
     const productsUrl:string = `${this.baseUrl}/products?limit=${limit}`;
     return this.http.get<Array<ProductRepresentation>>(productsUrl);

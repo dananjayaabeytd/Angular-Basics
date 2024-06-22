@@ -10,8 +10,10 @@ export class MyFirstCompComponent {
   name:String= '';
   email:String= '';
   message:String= '';
+  isSubmitted:boolean= false;
   
   onSubmit() :void{
+    this.isSubmitted = true;
     console.log('Name: '+this.name);
     console.log('Email: '+this.email);
     console.log('Message: '+this.message);
